@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Education - Investing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Investing</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="budgeting.html">Budgeting</a></li>
+            <li><a href="saving.html">Saving</a></li>
+            <li><a href="investing.html" class="active">Investing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="guide-section">
+            <h3>Understanding SIP Investment</h3>
+            <p>
+                SIP (Systematic Investment Plan) is a disciplined approach towards investing regularly in mutual funds. It helps you build wealth over time with consistent, small investments rather than lump sum amounts. Using the SIP calculator, you can estimate the future value of your investments based on your monthly contributions, expected returns, and investment tenure.
+            </p>
+            <p>
+                It's important to note that past performance doesn't guarantee future results, and mutual fund investments are subject to market risks. Please consult with a financial advisor before making investment decisions.
+            </p>
+            <div class="container">
+                <h2>SIP Calculator</h2>
+                <form id="sipForm">
+                    <div class="input-group">
+                        <label for="sipAmount">Monthly SIP Amount (₹):</label>
+                        <input type="number" id="sipAmount" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="interestRate">Interest Rate (%):</label>
+                        <input type="number" id="interestRate" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="years">Investment Duration (Years):</label>
+                        <input type="number" id="years" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inflationRate">Inflation Rate (%):</label>
+                        <input type="number" id="inflationRate" required>
+                    </div>
+                    <button type="button" onclick="calculateSIP()">Calculate</button>
+                </form>
+                <div id="sipResult" class="result">
+                    <p id="sipFutureValue"></p>
+                    <p id="sipAdjustedValue"></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Guide Section -->
+        <div class="guide-section">
+            <h3>Understanding Lumpsum Investment</h3>
+            <p>
+                Lumpsum investment allows you to invest a large sum of money all at once, rather than spreading it out over time like in SIPs. The lumpsum calculator helps you estimate the future value of your investment by entering a one-time investment amount, expected returns, and the investment tenure.
+            </p>
+            <p>
+                Lumpsum investments can be more volatile since the entire amount is invested at once. The market performance will directly affect your returns. Ensure you assess the market conditions and consult with a financial expert before making a lumpsum investment.
+            </p>
+            <div class="container">
+                <h2>Lumpsum Calculator</h2>
+                <form id="lumpsumForm">
+                    <div class="input-group">
+                        <label for="lumpsumAmount">Investment Amount (₹):</label>
+                        <input type="number" id="lumpsumAmount" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="returnRate">Expected Annual Return Rate (%):</label>
+                        <input type="number" id="returnRate" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="yearsLumpsum">Investment Duration (Years):</label>
+                        <input type="number" id="yearsLumpsum" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inflationRateLumpsum">Inflation Rate (%):</label>
+                        <input type="number" id="inflationRateLumpsum" required>
+                    </div>
+                    <button type="button" onclick="calculateLumpsum()">Calculate</button>
+                </form>
+                <div id="lumpsumResult" class="result">
+                    <p id="lumpsumFutureValue"></p>
+                    <p id="lumpsumAdjustedValue"></p>
+                </div>
+            </div>
+        </div>
+          <!-- Guide Section -->
+          <section>
+            <h2>What is Investing?</h2>
+            <p>Investing is the act of allocating resources, usually money, with the expectation of generating an income or profit. By investing, you put your money to work to grow over time.</p>
+            <p>Investing allows individuals to grow their wealth, beat inflation, and potentially secure a more comfortable financial future.</p>
+        </section>
+
+        <section>
+            <h2>Types of Investments</h2>
+            <ul>
+                <li><strong>Stocks:</strong> Investing in individual company shares allows you to own a portion of the company. The value of stocks can grow over time but also comes with risk.</li>
+                <li><strong>Bonds:</strong> Bonds are loans made to companies or governments. They offer a fixed return over time and are generally considered less risky than stocks.</li>
+                <li><strong>Real Estate:</strong> Real estate investments involve purchasing properties to earn rental income or for potential appreciation in value.</li>
+                <li><strong>Mutual Funds:</strong> A collection of stocks, bonds, and other assets managed by a professional fund manager. It allows for diversification with a smaller investment.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why is Investing Important?</h2>
+            <p>Investing allows your money to grow faster than just saving it in a bank account. When you invest, you benefit from returns on your investments, compounding interest, and potentially a higher return rate over time compared to simple interest in savings accounts.</p>
+            <p>Inflation erodes the value of your money over time, which is why investing is essential to ensure that your money grows and keeps pace with rising prices.</p>
+        </section>
+
+        <section>
+            <h2>What Can Investing Do for You?</h2>
+            <p>Investing can open up opportunities for:</p>
+            <ul>
+                <li><strong>Wealth Accumulation:</strong> Investments can lead to wealth generation over time, helping you build assets for future needs.</li>
+                <li><strong>Financial Independence:</strong> By investing wisely and consistently, you can achieve financial freedom, meaning you don’t have to rely solely on earned income.</li>
+                <li><strong>Retirement Security:</strong> Investing for retirement ensures that you have sufficient funds to live comfortably when you retire.</li>
+                <li><strong>Passive Income:</strong> Investments like real estate or stocks can generate passive income streams that allow you to earn money without actively working.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Achieving Financial Freedom through Investing</h2>
+            <p>Financial freedom is the state where your passive income from investments covers your living expenses, allowing you to live on your terms without relying on a paycheck.</p>
+            <p>By following a disciplined investment strategy and diversifying your investments, you can build wealth over time and move closer to financial independence.</p>
+            <p>Some key steps to achieving financial freedom include:</p>
+            <ul>
+                <li><strong>Start Early:</strong> The earlier you begin investing, the more time your money has to grow due to compounding returns.</li>
+                <li><strong>Stay Consistent:</strong> Regular contributions to your investments (like SIPs) will accumulate over time, even if they are small amounts.</li>
+                <li><strong>Plan for Long-Term:</strong> Focus on long-term goals rather than short-term market fluctuations. Patience is key in the investing world.</li>
+                <li><strong>Diversify Your Investments:</strong> Spread your investments across different asset classes to reduce risk and increase potential returns.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Finance Education. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

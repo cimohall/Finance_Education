@@ -1,0 +1,383 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #ff9800, #ffb74d); /* Orange gradient */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-left: -85px;
+    padding-top: 10px;
+    font-size: 2rem;
+    color: white; /* Ensure h1 is white on every page */
+    position: relative;
+}
+
+header h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: all ease 1s;
+    transform: translateX(-50%);
+}
+
+header h1:hover::after {
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    border-radius: 12px; /* Slight rounded corners */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #ff9800; /* Changed to orange */
+    transform: scale(1.05); /* Slight scale effect */
+    border-radius: 12px; /* Slight rounded corners */
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #ff9800; /* Orange */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Ensure footer is at the bottom */
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: left;
+        padding: 10px;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* SIP Calculator Styles */
+.sip-calculator {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fffbf0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sip-calculator h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.invalid-feedback {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+}
+
+.sip-calculator input {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.sip-calculator input:focus {
+    border-color: #ff9800; /* Highlight border on focus */
+}
+
+.sip-calculator button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sip-calculator button:hover {
+    background-color: #f39200;
+    transform: scale(1.05); /* Smooth button hover effect */
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#result .h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.progress {
+    display: none;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 2px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #ff9800;
+    border-radius: 2px;
+    transition: width 0.5s;
+}
+
+.center-stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Investment Calculator Styles */
+#calculator {
+    background: #eee;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+#calculator label {
+    display: block;
+    margin: 0.5em 0;
+}
+
+#calculator input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#calculator button {
+    background: #333;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#calculator button:hover {
+    background: #555;
+}
+
+#result {
+    margin-top: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Lumpsum Investment Calculator Styles */
+#lumpsum-calculator {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#lumpsum-calculator h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#lumpsum-calculator .form-group {
+    margin-bottom: 20px;
+}
+
+#lumpsum-calculator .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+#lumpsum-calculator input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#lumpsum-calculator input:focus {
+    border-color: #ff9800; /* Highlight border on focus */
+}
+
+#lumpsum-calculator button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#lumpsum-calculator button:hover {
+    background-color: #f39200;
+    transform: scale(1.05);
+}
+
+#lumpsum-result {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#lumpsum-result .h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Guides Section for Calculator Pages */
+.guide-section {
+    background-color: #fffbf0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guide-section h3 {
+    color: #ff9800;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.guide-section p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.container button {
+    background: #333;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background: #555;
+}
